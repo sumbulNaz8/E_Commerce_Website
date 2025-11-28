@@ -1,0 +1,227 @@
+
+:root {
+	/* color variables */
+	--gray-100: #f7fafc;
+	--base-color-white: #fff;
+	--gray-300: #dee2e7;
+	--white: #fff;
+	--primary: #0d6efd;
+	--dark: #1c1c1c;
+	--gray-500: #8b96a5;
+	--base-color-dark: #1c1c1c;
+	--base-color-gray-200: #e0e0e0;
+	--base-color-gray-100: #f7f7f7;
+	--green: #00b517;
+	--gray-600: #505050;
+	--gray-400: #bdc4cd;
+	--gray-200: #eff2f4;
+	--base-color-gray-800: #606060;
+	--orange: #ff9017;
+	--base-color-gray-400: #a9acb0;
+
+	/* responsive margins / paddings */
+	--margin-sm: 16px;
+	--margin-md: 32px;
+}
+
+* {
+	--min-screen-size: 430;
+	--max-screen-size: 1440;
+	--interpolate-diff: calc(var(--max-font-size) - var(--min-font-size));
+	--interpolate: clamp(calc(var(--min-font-size) * 1px), calc((var(--min-font-size) * 1px) + var(--interpolate-diff) * ((100vw - calc(var(--min-screen-size) * 1px)) / (var(--max-screen-size) - var(--min-screen-size)))), calc(var(--max-font-size) * 1px));
+}
+
+html {
+	height: 100%;
+	font-size: 16px;
+}
+
+
+
+/* text utility classes */
+
+.title-h6 {
+	color: #fff;
+	font-size: 24px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.333;
+	letter-spacing: -0.2px;
+}
+
+.title-h5 {
+	color: var(--dark);
+	font-size: 18px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: 0px;
+}
+
+.title-h4 {
+	color: var(--dark);
+	--min-font-size: 16; --max-font-size: 20; font-size: var(--interpolate);
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: -0.2px;
+}
+
+.title-h1 {
+	color: var(--dark);
+	--min-font-size: 17; --max-font-size: 24; font-size: var(--interpolate);
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.333;
+	letter-spacing: -0.2px;
+}
+
+.text-btn-btn-normal {
+	font-size: 16px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 0px;
+}
+
+.text-btn-btn-large {
+	color: var(--white);
+	font-size: 18px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 0px;
+}
+
+.text-base {
+	font-size: 16px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: 0px;
+}
+
+.title-h3 {
+	color: var(--dark);
+	font-size: 20px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: -0.2px;
+}
+
+.title-h2 {
+	color: var(--dark);
+	font-size: 16px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: 0px;
+}
+
+.text-normal {
+	color: var(--base-color-gray-800);
+	font-size: 16px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: -0.2px;
+}
+
+.text-title {
+	color: var(--dark);
+	font-size: 16px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.375;
+	letter-spacing: 0px;
+}
+
+
+
+/* ui objects utility classes */
+
+.card-light1 {
+	width: 80px;
+	background-color: #f7f7f7;
+	padding: 4px;
+	border: 1px solid var(--base-color-gray-200);
+	border-radius: 6px;
+}
+
+.btn-white1 {
+	box-shadow: 0px 1px 2px 0px rgba(56, 56, 56, 0.08);
+	display: flex;
+	align-items: flex-start;
+	background-color: #fff;
+	padding: 10px 7px 9px 7px;
+	border: 1px solid var(--gray-300);
+	border-radius: 6px;
+}
+
+.btn-orange {
+	display: flex;
+	background-color: var(--orange);
+	padding: 11px 16px;
+	border-radius: 6px;
+}
+
+.btn-white3 {
+	width: 85px;
+	display: flex;
+	background-color: var(--white);
+	padding: 10px 7px 9px 7px;
+	border: 1px solid var(--gray-300);
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.btn-white2 {
+	display: flex;
+	background-color: var(--white);
+	padding: 10px 16px;
+	border: 1px solid var(--gray-300);
+	border-radius: 6px;
+}
+
+.card-light2 {
+	background-color: #eee;
+	padding: 8px 23px 7px 22px;
+	border-radius: 6px;
+}
+
+.btn {
+	display: flex;
+	background-color: var(--green);
+	padding: 16px 20px;
+	border-radius: 8px;
+}
+
+.circle-light {
+	width: 48px; height: 48px;
+	background-color: var(--gray-300);
+	border-radius: 50%;
+}
+
+
+
+/* button hover utility classes */
+
+.hover-dark:hover {
+	filter: brightness(0.85);
+}
+
+.hover-bright:hover {
+	filter: brightness(1.2);
+}
